@@ -27,6 +27,6 @@ export class EmployeesTableComponent implements OnInit {
   }
 
   getRowColor(salary: number): string {
-    return salary > 3000 ? 'blue' : 'red';
+    return salary > 3000 ? 'CornflowerBlue' : 'IndianRed';
   }
 }
