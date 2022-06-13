@@ -1,7 +1,11 @@
 import Person from '../Person';
 
 export default class EventData {
+  private _eventCode: number;
+  private _numberOfParticipants: number;
   private _eventName: string;
+  private _eventManager: Person;
+
   public get eventName(): string {
     return this._eventName;
   }
@@ -9,7 +13,6 @@ export default class EventData {
     this._eventName = v;
   }
 
-  private _eventCode: number;
   public get eventCode(): number {
     return this._eventCode;
   }
@@ -17,7 +20,6 @@ export default class EventData {
     this._eventCode = v;
   }
 
-  private _numberOfParticipants: number;
   public get numberOfParticipants(): number {
     return this._numberOfParticipants;
   }
@@ -25,7 +27,6 @@ export default class EventData {
     this._numberOfParticipants = v;
   }
 
-  private _eventManager: Person;
   public get eventManager(): Person {
     return this._eventManager;
   }
@@ -34,9 +35,15 @@ export default class EventData {
   }
 
   constructor(
-    eventName: String,
+    eventName: string,
     eventCode: number,
     numberOfParticipants: number,
     eventManager: Person
-  ) {}
+  ) {
+    this._eventCode = this.eventCode = eventCode;
+    this._numberOfParticipants = this.numberOfParticipants =
+      numberOfParticipants;
+    this._eventName = this.eventName = eventName;
+    this._eventManager = this.eventManager = eventManager;
+  }
 }

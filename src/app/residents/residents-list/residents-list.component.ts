@@ -20,11 +20,9 @@ export class ResidentsListComponent implements OnInit {
     this.service.getResidents().subscribe((res) => (this.residents = res));
   }
 
-  getResidentsById() {
-    let result;
-    this.service
-      .getResidentById('123485678')
-      .subscribe((res) => (result = res));
-    console.log(result);
+  getResidentById(id: string): Resident {
+    let result: Resident;
+    this.service.getResidentById(id).subscribe((res) => (result = res));
+    return result;
   }
 }

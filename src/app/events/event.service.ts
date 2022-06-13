@@ -12,7 +12,7 @@ export class EventService {
   getEvents(): Observable<EventData[]> {
     return of(EVENTS);
   }
-  getEventById(eventCode: number): Observable<EventData> {
+  getEventByCode(eventCode: number): Observable<EventData> {
     return this.getEvents().pipe(
       map((residents: EventData[]) =>
         residents.find((e) => e.eventCode === eventCode)

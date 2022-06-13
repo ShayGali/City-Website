@@ -1,1 +1,20 @@
-<p>events-table works!</p>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Participants</th>
+    <th>Manager name</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.eventCode }}</td>
+      <td>{{ event.eventName }}</td>
+      <td [id]="getClass(event.numberOfParticipants)">
+        {{ event.numberOfParticipants }}
+      </td>
+      <td>{{ event.eventManager.fullName }}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
