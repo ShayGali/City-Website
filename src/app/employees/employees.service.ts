@@ -10,7 +10,7 @@ export class EmployeesService {
   getEmployees(): Observable<Employee[]> {
     return of(EMPLOYEES);
   }
-  getEmployeeById(id: string): Observable<Employee> {
+  getEmployeeById(id: string): Observable<Employee | undefined> {
     return this.getEmployees().pipe(
       map((residents: Employee[]) => residents.find((e) => e.id === id))
     );

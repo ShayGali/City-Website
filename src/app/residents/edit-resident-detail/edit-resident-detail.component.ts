@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./edit-resident-detail.component.css'],
 })
 export class EditResidentDetailComponent implements OnInit {
-  resident: Observable<Resident>;
+  resident: Observable<Resident | undefined> = new Observable();
 
   constructor(
     private route: ActivatedRoute,
@@ -20,9 +20,9 @@ export class EditResidentDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.resident = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.service.getResidentById(params.get('id'))
-      )
+      switchMap((params: ParamMap) => {
+        return this.service.getResidentById(String(params.get('id')));
+      })
     );
   }
 

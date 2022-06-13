@@ -20,8 +20,8 @@ export class ResidentsListComponent implements OnInit {
     this.service.getResidents().subscribe((res) => (this.residents = res));
   }
 
-  getResidentById(id: string): Resident {
-    let result: Resident;
+  getResidentById(id: string): Resident | undefined {
+    let result: Resident | undefined;
     this.service.getResidentById(id).subscribe((res) => (result = res));
     return result;
   }

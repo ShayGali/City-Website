@@ -12,7 +12,7 @@ export class ResidentsService {
   getResidents(): Observable<Resident[]> {
     return of(RESIDENTS);
   }
-  getResidentById(id: string): Observable<Resident> {
+  getResidentById(id: string): Observable<Resident | undefined> {
     return this.getResidents().pipe(
       map((residents: Resident[]) => residents.find((r) => r.id === id))
     );

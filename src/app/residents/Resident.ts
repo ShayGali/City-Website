@@ -1,10 +1,17 @@
 import Person from '../Person';
 
+// export enum MaritalStatus {
+//   BACHELOR = 'A',
+//   MARRIED = 'B',
+//   DIVORCEE = 'C',
+//   WIDOWER = 'D',
+// }
+
 export enum MaritalStatus {
-  BACHELOR = 'A',
-  MARRIED = 'B',
-  DIVORCEE = 'C',
-  WIDOWER = 'D',
+  BACHELOR = 'bachelor',
+  MARRIED = 'married',
+  DIVORCEE = 'divorcee',
+  WIDOWER = 'widower',
 }
 
 export default class Resident extends Person {

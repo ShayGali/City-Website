@@ -11,7 +11,7 @@ import EventData from '../EventData';
   styleUrls: ['./edit-event-detail.component.css'],
 })
 export class EditEventDetailComponent implements OnInit {
-  event: Observable<EventData>;
+  event: Observable<EventData | undefined> = new Observable();
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -20,9 +20,11 @@ export class EditEventDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.event = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-        this.service.getEventByCode(+params.get('id'))
-      )
+      switchMap((params: ParamMap) => {
+        if (!isNaN(Number(params.get('id'))))
+          return this.service.getEventByCode(Number(params.get('id')));
+        else return this.service.getEventByCode(0);
+      })
     );
   }
 

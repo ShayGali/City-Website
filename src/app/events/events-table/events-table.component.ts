@@ -8,7 +8,7 @@ import EventData from '../EventData';
   styleUrls: ['./events-table.component.css'],
 })
 export class EventsTableComponent implements OnInit {
-  events: EventData[];
+  events: EventData[] = [];
   constructor(private service: EventService) {}
 
   ngOnInit(): void {
@@ -18,8 +18,8 @@ export class EventsTableComponent implements OnInit {
   getEvents(): void {
     this.service.getEvents().subscribe((events) => (this.events = events));
   }
-  getEventByCode(eventCode: number): EventData {
-    let result: EventData;
+  getEventByCode(eventCode: number): EventData | undefined {
+    let result: EventData | undefined;
     this.service
       .getEventByCode(eventCode)
       .subscribe((event) => (result = event));

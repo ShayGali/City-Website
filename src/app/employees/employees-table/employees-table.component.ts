@@ -8,7 +8,7 @@ import { EmployeesService } from '../employees.service';
   styleUrls: ['./employees-table.component.css'],
 })
 export class EmployeesTableComponent implements OnInit {
-  employees: Employee[];
+  employees: Employee[] = [];
   constructor(private service: EmployeesService) {}
 
   ngOnInit(): void {
@@ -20,8 +20,8 @@ export class EmployeesTableComponent implements OnInit {
       .subscribe((employee) => (this.employees = employee));
   }
 
-  getEmployeeById(id: string): Employee {
-    let result: Employee;
+  getEmployeeById(id: string): Employee | undefined {
+    let result: Employee | undefined;
     this.service.getEmployeeById(id).subscribe((res) => (result = res));
     return result;
   }
