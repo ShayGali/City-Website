@@ -1,1 +1,13 @@
-<p>edit-event-detail works!</p>
+<div *ngIf="event | async as event">
+  <div class="card">
+    <div class="row">
+      <div class="card-body col-sm-6">
+        <h5 class="card-title">{{ event.eventName }}</h5>
+        <p>numberOfParticipants: {{ event.numberOfParticipants }}</p>
+        <p>eventManager: {{ event.eventManager }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-secondary" (click)="goBack()">BACK</button>

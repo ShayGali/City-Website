@@ -4,6 +4,7 @@
     <th>Name</th>
     <th>Participants</th>
     <th>Manager name</th>
+    <th>Edit</th>
   </thead>
 
   <tbody>
@@ -14,7 +15,11 @@
         {{ event.numberOfParticipants }}
       </td>
       <td>{{ event.eventManager.fullName }}</td>
-      <td></td>
+      <td>
+        <a [routerLink]="['/events', event.eventCode]" class="btn btn-primary"
+          >Edit</a
+        >
+      </td>
     </tr>
   </tbody>
 </table>
