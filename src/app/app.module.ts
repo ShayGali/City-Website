@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ResidentsComponent } from './residents/residents.component';
-import { EventsComponent } from './events/events.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { BussinessComponent } from './bussiness/bussiness.component';
+import { EventsModule } from './events/events.module';
+import { ResidentsModule } from './residents/residents.module';
+import { EmployeesModule } from './employees/employees.module';
+import { BussinessModule } from './bussiness/bussiness.module';
 
 @NgModule({
-  declarations: [AppComponent, ResidentsComponent, EventsComponent, EmployeesComponent, BussinessComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, ResidentsModule, EventsModule, EmployeesModule, BussinessModule],
   providers: [],
   bootstrap: [AppComponent],
 })
