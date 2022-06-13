@@ -1,11 +1,11 @@
-enum MaritalStatus {
+export enum MaritalStatus {
   BACHELOR = 'A',
   MARRIED = 'B',
   DIVORCEE = 'C',
   WIDOWER = 'D',
 }
 
-class Resident extends Person {
+export default class Resident extends Person {
   private _startYear: number;
   private _maritalStatus: MaritalStatus;
   private _address: string;
