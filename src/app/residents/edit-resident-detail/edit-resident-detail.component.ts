@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import Resident from '../Resident';
 import { ResidentsService } from '../residents.service';
 import { switchMap } from 'rxjs/operators';
-import { MaritalStatus } from '../Resident';
 @Component({
   selector: 'app-edit-resident-detail',
   templateUrl: './edit-resident-detail.component.html',
