@@ -1,1 +1,28 @@
-<p>employees-table works!</p>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Work Name</th>
+    <th>Monthly Hours</th>
+    <th>Hourly Wage</th>
+    <th>Salary</th>
+  </thead>
+
+  <tbody>
+    <tr
+      *ngFor="let employee of employees"
+      [ngStyle]="{
+        'background-color': getRowColor(
+          employee.monthlyHours * employee.hourlyWage
+        )
+      }"
+    >
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.fullName }}</td>
+      <td>{{ employee.workName }}</td>
+      <td>{{ employee.monthlyHours }}</td>
+      <td>{{ employee.hourlyWage }}</td>
+      <td>{{ employee.monthlyHours * employee.hourlyWage }}</td>
+    </tr>
+  </tbody>
+</table>

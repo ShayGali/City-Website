@@ -17,6 +17,9 @@ export default class EventData {
     return this._eventCode;
   }
   public set eventCode(v: number) {
+    if (v < 300 || v > 700)
+      throw new RangeError('event code need to be between 300 and 700');
+
     this._eventCode = v;
   }
 
@@ -24,6 +27,9 @@ export default class EventData {
     return this._numberOfParticipants;
   }
   public set numberOfParticipants(v: number) {
+    if (v > 500000)
+      throw new RangeError('numberOfParticipants need to be smaller then');
+
     this._numberOfParticipants = v;
   }
 
