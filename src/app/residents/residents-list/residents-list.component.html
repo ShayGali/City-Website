@@ -1,6 +1,5 @@
 <div class="container">
   <h3>resident list</h3>
-  <button (click)="getResidentsById()">click</button>
   <div class="row">
     <div *ngFor="let resident of residents" class="col-sm-6">
       <div class="card">
@@ -9,6 +8,7 @@
             <h5 class="card-title">{{ resident.fullName }}</h5>
             <p>Age: {{ resident.age }}</p>
             <p>City: {{ resident.city }}</p>
+            <p>Address: {{ resident.address }}</p>
             <p>Marital Status: {{ resident.maritalStatus }}</p>
             <p>Start Year: {{ resident.startYear }}</p>
             <a

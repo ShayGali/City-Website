@@ -8,11 +8,13 @@ import { ResidentsModule } from './residents/residents.module';
 import { EmployeesModule } from './employees/employees.module';
 import { BussinessModule } from './bussiness/bussiness.module';
 import { HomepageComponent } from './homepage/homepage.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomepageComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ResidentsModule,
     EventsModule,

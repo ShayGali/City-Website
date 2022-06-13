@@ -1,1 +1,76 @@
-<p>edit-resident-detail works!</p>
+<div class="container">
+  <h2>Student - details</h2>
+  <div *ngIf="resident | async as resident">
+    <div class="card">
+      <div class="row">
+        <div class="card-body col-sm-6">
+          <h5 class="card-title">{{ resident.fullName }}</h5>
+          <p>Age: {{ resident.age }}</p>
+          <p>City: {{ resident.city }}</p>
+          <p>Address: {{ resident.address }}</p>
+          <p>Marital Status: {{ resident.maritalStatus }}</p>
+          <p>Start Year: {{ resident.startYear }}</p>
+        </div>
+        <div class="col-sm-6 image-container">
+          <img
+            [src]="resident.imgUrl"
+            alt="Profile picture"
+            class="profile-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>Name:</label>
+          <input
+            type="email"
+            class="form-control"
+            [(ngModel)]="resident.fullName"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label>Age:</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="resident.age"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label>City:</label>
+          <input type="test" class="form-control" [(ngModel)]="resident.city" />
+        </div>
+        <div class="form-group col-md-6">
+          <label>Address</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="resident.address"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label>Start Year:</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="resident.startYear"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label>Marital Status:</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="resident.maritalStatus"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <button class="btn btn-secondary" (click)="goBack()">BACK</button>
+</div>
