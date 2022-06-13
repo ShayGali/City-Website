@@ -1,3 +1,5 @@
+import Person from '../Person';
+
 export enum MaritalStatus {
   BACHELOR = 'A',
   MARRIED = 'B',
@@ -22,7 +24,7 @@ export default class Resident extends Person {
   public set startYear(v: number) {
     let currentYear = new Date().getFullYear();
     if (v < 1900 || v > currentYear)
-      throw RangeError(`year nedd to be between 1900 and ${currentYear}`);
+      throw RangeError(`year need to be between 1900 and ${currentYear}`);
     this._startYear = v;
   }
 

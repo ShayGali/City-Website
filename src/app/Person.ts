@@ -1,4 +1,4 @@
-class Person {
+export default class Person {
   private _id: string;
   private _fullName: string;
   private _age: number;
@@ -66,6 +66,3 @@ class Person {
     this._imgUrl = v;
   }
 }
-
-let p = new Person('12345678', 'shay', 121, true, '');
-console.log(p);
