@@ -1,1 +1,23 @@
-<p>bussiness-list works!</p>
+<h2>The Businesses In Hadera</h2>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <th>Work Name</th>
+    <th>Bussiness Number</th>
+    <th>Number Of Employees</th>
+    <th>Average Profit</th>
+  </thead>
+
+  <tbody>
+    <tr
+      *ngFor="let bussiness of businesses"
+      [ngStyle]="{
+        'background-color': getRowColor(bussiness.averageProfit)
+      }"
+    >
+      <td>{{ bussiness.workName }}</td>
+      <td>{{ bussiness.bussinessNumber }}</td>
+      <td>{{ bussiness.numberOfEmp }}</td>
+      <td>{{ bussiness.averageProfit }}</td>
+    </tr>
+  </tbody>
+</table>
