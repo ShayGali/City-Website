@@ -1,4 +1,6 @@
-<div *ngIf="event | async as event">
+<h2>Edit Event</h2>
+
+<div *ngIf="event | async as event; else eventNotFound">
   <div class="card">
     <div class="row">
       <div class="card-body col-sm-6">
@@ -9,5 +11,7 @@
     </div>
   </div>
 </div>
-
-<button class="btn btn-secondary" (click)="goBack()">BACK</button>
+<ng-template #eventNotFound
+  ><h4 style="color: red">Error 404, Event Not Found!</h4>
+</ng-template>
+<br /><button class="btn btn-secondary" (click)="goBack()">BACK</button>

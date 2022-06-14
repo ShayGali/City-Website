@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Student - details</h2>
-  <div *ngIf="resident | async as resident">
+  <div *ngIf="resident | async as resident; else residentNotFound">
     <div class="card">
       <div class="row">
         <div class="card-body col-sm-6">
@@ -74,6 +74,9 @@
     </div>
   </div>
 
+  <ng-template #residentNotFound
+    ><h4 style="color: red">Error 404, Resident Not Found!</h4>
+  </ng-template>
   <br />
   <button class="btn btn-secondary" (click)="goBack()">BACK</button>
 </div>
