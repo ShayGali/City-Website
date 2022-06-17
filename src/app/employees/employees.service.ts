@@ -12,7 +12,7 @@ export class EmployeesService {
   }
   getEmployeeById(id: string): Observable<Employee | undefined> {
     return this.getEmployees().pipe(
-      map((residents: Employee[]) => residents.find((e) => e.id === id))
+      map((employee: Employee[]) => employee.find((e) => e.id === id))
     );
   }
 }

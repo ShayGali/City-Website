@@ -13,8 +13,8 @@ export class BussinessService {
   }
   getBussiness(bussinessNumber: number): Observable<Bussiness | undefined> {
     return this.getBusinesses().pipe(
-      map((residents: Bussiness[]) =>
-        residents.find((e) => e.bussinessNumber === bussinessNumber)
+      map((bussiness: Bussiness[]) =>
+        bussiness.find((e) => e.bussinessNumber === bussinessNumber)
       )
     );
   }

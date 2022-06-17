@@ -4,9 +4,41 @@
   <div class="card">
     <div class="row">
       <div class="card-body col-sm-6">
-        <h5 class="card-title">{{ event.eventName }}</h5>
-        <p>numberOfParticipants: {{ event.numberOfParticipants }}</p>
-        <p>eventManager: {{ event.eventManager }}</p>
+        <h4 class="card-title">{{ event.eventName }}</h4>
+        <p>Event Code: {{ event.eventCode }}</p>
+        <p>Number Of Participants: {{ event.numberOfParticipants }}</p>
+        <p>Event Manager Name: {{ event.eventManager.fullName }}</p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <h4>Edit Data:</h4>
+  <div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label>Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="event.eventName" />
+      </div>
+      <div class="form-group col-md-6">
+        <label>Event Code:</label>
+        <input type="text" class="form-control" [(ngModel)]="event.eventCode" />
+      </div>
+      <div class="form-group col-md-6">
+        <label>Number Of Participants:</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="event.numberOfParticipants"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label>Event Manager Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="event.eventManager.fullName"
+        />
       </div>
     </div>
   </div>
@@ -14,4 +46,6 @@
 <ng-template #eventNotFound
   ><h4 style="color: red">Error 404, Event Not Found!</h4>
 </ng-template>
-<br /><button class="btn btn-secondary" (click)="goBack()">BACK</button>
+<br />
+<br />
+<button class="btn btn-secondary" (click)="goBack()">BACK</button>
