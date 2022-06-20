@@ -4,32 +4,32 @@ This project was built as part of an Angular course.
 
 The project was to build a website for a specific municipality with the option to edit the information on the website.
 
-## <u>Pages</u>
+## <ins>Pages</ins>
 
-### <u> Home Page</u>
+### <ins> Home Page</ins>
 
 The website home page
 ![home page img](./app-img/home_page.png)
 
-### <u>Residents</u>
+### <ins>Residents</ins>
 
 Represents the residents of the city, there are two routes here:
 
-#### <u>Residents Cards</u>
+#### <ins>Residents Cards</ins>
 
 Cards representing the residents with information about them and their photo and a button that takes us to edit the information about that resident.
 ![residents page img](./app-img/residents.png)
 
-#### <u>Edit Residents</u>
+#### <ins>Edit Residents</ins>
 
 This page allows us to edit the information about that resident, The information will change throughout the app in real time.
 ![edit residents page img](./app-img/edit_resident.png)
 
-### <u>Event Page</u>
+### <ins>Event Page</ins>
 
 Represents the events of the city, there are two routes here:
 
-#### <u>Events Table</u>
+#### <ins>Events Table</ins>
 
 This page has a table with all the events that are in the city.
 The color of the number of participants varies according to their quantity.
@@ -37,17 +37,16 @@ The color of the number of participants varies according to their quantity.
 At the end of each column there is a button that allows you to edit the information about that event
 ![events page img](./app-img/events.png)
 
-#### <u>Edit Event Page</u>
+#### <ins>Edit Event Page</ins>
 
 This page allows us to edit the information about that event, the information will change throughout the app in real time.
 ![edit event page img](./app-img/edit_event.png)
 
-### <u>Bussiness Page</u>
+### <ins>Bussiness Page</ins>
 
-This page contains the table of businesses in the city. The background color varies according to the average profit of the business.
-![bussiness page img](./app-img/bussiness.png)
+This page contains the table of businesses in the city. The background color varies according to the average profit of the business.![bussiness page img](./app-img/bussiness.png)
 
-### <u>Employees Page</u>
+### <ins>Employees Page</ins>
 
 This page has the table of the outstanding employees of the month. The background color varies according to the employee's salary
 ![employees page img](./app-img/employees.png)
