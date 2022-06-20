@@ -2,7 +2,7 @@ import Resident, { MaritalStatus } from './Resident';
 export const RESIDENTS = [
   new Resident(
     '12345678',
-    'Shay Gali',
+    'Shay G',
     23,
     true,
     'https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg',
@@ -22,7 +22,7 @@ export const RESIDENTS = [
   ),
   new Resident(
     '03213987',
-    'Loren Halevi',
+    'Rorke Berrey',
     52,
     false,
     'https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194__340.jpg',
@@ -52,7 +52,7 @@ export const RESIDENTS = [
   ),
   new Resident(
     '315269875',
-    'Bar Gali',
+    'Tito Mantrip',
     21,
     true,
     'https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453__340.jpg',
