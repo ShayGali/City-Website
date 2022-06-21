@@ -1,4 +1,4 @@
-# Angular Bonus Task
+# City Website
 
 This project was built as part of an Angular course.
 
