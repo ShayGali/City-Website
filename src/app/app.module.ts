@@ -11,12 +11,18 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
-  declarations: [AppComponent, HomepageComponent, NavbarComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HomepageComponent,
+    NavbarComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgbModule,
     AppRoutingModule,
     ResidentsModule,
     EventsModule,
