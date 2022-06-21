@@ -4,7 +4,7 @@ This project was built as part of an Angular course.
 
 The project was to build a website for a specific municipality with the option to edit the information on the website.
 
-[Link to GitHub pages](https://shaygali.github.io/Angular-Bonus-Task/bussiness)
+[Link to GitHub pages](https://shaygali.github.io/City-Website/)
 
 ## <ins>Pages</ins>
 
