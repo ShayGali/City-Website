@@ -2,8 +2,15 @@
   <h3>resident list</h3>
   <div class="row">
     <div *ngFor="let resident of residents" class="col-sm-6">
-      <div class="card">
+      <div class="card" style="margin-bottom: 20px; padding: 10px">
         <div class="row">
+          <div class="col-sm-6 image-container">
+            <img
+              [src]="resident.imgUrl"
+              alt="Profile picture"
+              class="profile-img"
+            />
+          </div>
           <div class="card-body col-sm-6">
             <h5 class="card-title">{{ resident.fullName }}</h5>
             <p>Age: {{ resident.age }}</p>
@@ -12,20 +19,13 @@
             <p>Address: {{ resident.address }}</p>
             <p>Marital Status: {{ resident.maritalStatus }}</p>
             <p>Start Year: {{ resident.startYear }}</p>
-            <a
-              [routerLink]="['/residents', resident.id]"
-              class="btn btn-primary"
-              >Edit</a
-            >
-          </div>
-          <div class="col-sm-6 image-container">
-            <img
-              [src]="resident.imgUrl"
-              alt="Profile picture"
-              class="profile-img"
-            />
           </div>
         </div>
+        <a
+          [routerLink]="['/residents', resident.id]"
+          class="btn btn-primary w-100"
+          >Edit</a
+        >
       </div>
     </div>
   </div>

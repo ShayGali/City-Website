@@ -1,8 +1,15 @@
 <div class="container">
   <h2>Resident Details</h2>
   <div *ngIf="resident | async as resident; else residentNotFound">
-    <div class="card">
+    <div class="card" style="margin-bottom: 20px; padding: 10px">
       <div class="row">
+        <div class="col-sm-6 image-container">
+          <img
+            [src]="resident.imgUrl"
+            alt="Profile picture"
+            class="profile-img"
+          />
+        </div>
         <div class="card-body col-sm-6">
           <h5 class="card-title">{{ resident.fullName }}</h5>
           <p>Age: {{ resident.age }}</p>
@@ -10,13 +17,6 @@
           <p>Address: {{ resident.address }}</p>
           <p>Marital Status: {{ resident.maritalStatus }}</p>
           <p>Start Year: {{ resident.startYear }}</p>
-        </div>
-        <div class="col-sm-6 image-container">
-          <img
-            [src]="resident.imgUrl"
-            alt="Profile picture"
-            class="profile-img"
-          />
         </div>
       </div>
     </div>
